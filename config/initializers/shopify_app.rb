@@ -6,7 +6,7 @@ ShopifyApp.configure do |config|
   config.scope = "read_orders, read_products, write_products, read_script_tags, write_script_tags"
   config.embedded_app = false
   config.scripttags = [
-      {event:'onload', src: BASE_URL +'javascripts/index_page.js'},
+      {event:'onload', src: "" + BASE_URL + 'javascripts/index_page.js'},
   ]
 
 end

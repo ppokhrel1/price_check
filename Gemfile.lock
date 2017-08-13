@@ -141,6 +141,7 @@ GEM
     omniauth-shopify-oauth2 (1.2.0)
       omniauth-oauth2 (~> 1.4.0)
     os (0.9.6)
+    pg (0.21.0)
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
@@ -249,6 +250,7 @@ DEPENDENCIES
   jquery-rails
   json
   listen (~> 3.0.5)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.2)
   rufus-scheduler

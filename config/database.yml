@@ -23,7 +23,7 @@ test:
 production:
   database: db/production.sqlite3
   adapter: postgresql
-    database: production
-    pool: 5
-    username:
-    password:
+  database: production
+  pool: 5
+  username:
+  password:

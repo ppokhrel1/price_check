@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lookup</th>
+      <th>Name</th>
+      <th>Asin</th>
+      <th>Url</th>
+      <th>Lowest price</th>
+      <th>Total products</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data.each do |datum| %>
+      <tr>
+        <td><%= datum.lookup_id %></td>
+        <td><%= datum.name %></td>
+        <td><%= datum.asin %></td>
+        <td><%= datum.url %></td>
+        <td><%= datum.lowest_price %></td>
+        <td><%= datum.total_products %></td>
+        <td><%= datum.created_at %></td>
+        <td><%= datum.updated_at %></td>
+        <td><%= link_to 'Show', datum %></td>
+        <td><%= link_to 'Edit', edit_datum_path(datum) %></td>
+        <td><%= link_to 'Destroy', datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Datum', new_datum_path %>

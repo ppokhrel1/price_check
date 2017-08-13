@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lookups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Created at</th>
+      <th>Report time interval</th>
+      <th>Updated at</th>
+      <th>Search term</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lookups.each do |lookup| %>
+      <tr>
+        <td><%= lookup.product_id %></td>
+        <td><%= lookup.created_at %></td>
+        <td><%= lookup.report_time_interval %></td>
+        <td><%= lookup.updated_at %></td>
+        <td><%= lookup.search_term %></td>
+        <td><%= link_to 'Show', lookup %></td>
+        <td><%= link_to 'Edit', edit_lookup_path(lookup) %></td>
+        <td><%= link_to 'Destroy', lookup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lookup', new_lookup_path %>

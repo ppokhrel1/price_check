@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @lookup.product_id %>
+</p>
+
+<p>
+  <strong>Search term:</strong>
+  <%= @lookup.search_term %>
+</p>
+
+<p>
+  <strong>Items:</strong>
+  <%- if @search_terms %>
+    <%- @search_terms.each do |item| %>
+        <li> <%= link_to item["Title"], item["DetailPageURL"] %>
+        <%= item["Prices"]%></li>
+    <% end %>
+    <% else %>
+    <p> No records found. Please change search term. </p>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_lookup_path(@lookup) %> |
+<%= link_to 'Back', lookups_path %>

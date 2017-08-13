@@ -1,0 +1,57 @@
+<%= form_for(datum) do |f| %>
+  <% if datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(datum.errors.count, "error") %> prohibited this datum from being saved:</h2>
+
+      <ul>
+      <% datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lookup_id %>
+    <%= f.number_field :lookup_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :asin %>
+    <%= f.text_field :asin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_area :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lowest_price %>
+    <%= f.text_field :lowest_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :total_products %>
+    <%= f.text_field :total_products %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :updated_at %>
+    <%= f.datetime_select :updated_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

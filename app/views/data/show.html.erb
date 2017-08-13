@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lookup:</strong>
+  <%= @datum.lookup_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @datum.name %>
+</p>
+
+<p>
+  <strong>Asin:</strong>
+  <%= @datum.asin %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @datum.url %>
+</p>
+
+<p>
+  <strong>Lowest price:</strong>
+  <%= @datum.lowest_price %>
+</p>
+
+<p>
+  <strong>Total products:</strong>
+  <%= @datum.total_products %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @datum.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @datum.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_datum_path(@datum) %> |
+<%= link_to 'Back', data_path %>
